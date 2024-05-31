@@ -1,13 +1,13 @@
 -- CreateTable
 CREATE TABLE "User" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" INTEGER NOT NULL PRIMARY KEY,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL
 );
 
 -- CreateTable
 CREATE TABLE "Task" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" INTEGER NOT NULL PRIMARY KEY,
     "title" TEXT NOT NULL,
     "completed" BOOLEAN NOT NULL,
     "userId" INTEGER NOT NULL,

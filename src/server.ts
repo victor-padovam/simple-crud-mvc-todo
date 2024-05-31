@@ -1,25 +1,21 @@
-// import express from 'express'
-// import { prismaClient } from './database'
+import express from 'express'
+import cors from 'cors';
+import { json } from 'body-parser';
+import { getAllTasks, createTask, updateTask, deleteTask } from './controllers/task-controller';
+import { register, login } from './controllers/auth-controller';
 
-// const app = express()
-// app.use(express.json())
+const app = express()
+app.use(express.json())
 
-// const port = process.env.PORT ?? 4000
+const port = process.env.PORT ?? 4000
 
-// app.get('/books', async (request, response) => {
-//   const books = await prismaClient.book.findMany()
-//   return response.json(books)
-// })
+app.use(express.json());
 
-// app.post('/books', async (request, response) => {
-//   const { description, name } = request.body
-//   const book = await prismaClient.book.create({
-//     data: {
-//       description,
-//       name,
-//     },
-//   })
-//   return response.json(book)
-// })
+app.get('/tasks', getAllTasks);
+app.post('/tasks', createTask);
+app.put('/tasks/:id', updateTask);
+app.delete('/tasks/:id', deleteTask);
+app.post('/register', register);
+app.post('/login', login);
 
-// app.listen(port, () => console.log('Server is running on port ', port))
+app.listen(port, () => console.log('Server is running on port ', port))

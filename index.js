@@ -1,7 +1,11 @@
-// index.js
-import { app } from 'src/routes.ts';
+// src/routes.js
+import express from 'express';
 
-// This is the function that Vercel will call to handle incoming requests
-export default (req, res) => {
-    app(req, res);
-};
+const app = express();
+
+// Define your routes here
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+export { app };

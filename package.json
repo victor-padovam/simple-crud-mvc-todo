@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "tsx watch --env-file .env src/routes.ts",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",

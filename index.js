@@ -1,5 +1,11 @@
-import { app } from "./src/routes.js";
+// src/routes.js
+import express from 'express';
 
-app.listen(3000, () =>
-    console.log('Agora sim')
-);
+const app = express();
+
+// Define your routes here
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+export { app };

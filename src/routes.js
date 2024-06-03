@@ -5,9 +5,14 @@ const { getAllTasks, createTask, updateTask, deleteTask } = require('./controlle
 const { register, login } = require('./controllers/auth-controller');
 
 const app = express();
+const allowedOrigins = ['http://localhost:3000'];
+
+// const options = {
+//   origin: allowedOrigins
+// };
 
 app.use(json());
-app.use(cors(options));
+// app.use(cors(options));
 
 app.use(express.json());
 

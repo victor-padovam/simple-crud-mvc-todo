@@ -7,7 +7,6 @@
     "start": "node index.js",
     "build": "prisma generate && next build",
     "dev": "tsx watch --env-file .env src/routes.ts"
-
   },
   "keywords": [],
   "author": "",

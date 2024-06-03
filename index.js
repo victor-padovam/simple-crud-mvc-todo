@@ -1,5 +1,13 @@
-import { app } from "./src/routes.js";
+const express = require("express")
+const app = express()
 
-app.listen(3000, () =>
-    console.log('Agora sim')
-);
+require('dotenv').config()
+
+app.use(express.json())
+
+
+const bookRouter = require('./routes/book.router')
+
+app.use("/api/v1/books", bookRouter)
+
+app.listen(process.env.PORT, () => console.log("Server is running on port 5000"))

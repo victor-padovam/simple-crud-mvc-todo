@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file .env src/routes.ts",
-    "vercel-build": "npx prisma migrate deploy"
-    
-
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",

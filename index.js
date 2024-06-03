@@ -1,7 +1,6 @@
-// index.js
-import { app } from './src/routes.js';
+const { app } = require('./src/routes.js');
 
-// This is the function that Vercel will call to handle incoming requests
-export default (req, res) => {
+// Esta é a função que o Vercel chamará para lidar com as solicitações recebidas
+module.exports = (req, res) => {
     app(req, res);
 };

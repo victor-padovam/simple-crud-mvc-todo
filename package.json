@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file .env src/routes.ts",
+    "dev": "tsx watch --env-file .env src/routes.ts netlify dev",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
-    "build": "netlify deploy --prod"
-
+    "build": "prisma generate && netlify deploy --prod"
   },
   "keywords": [],
   "author": "",

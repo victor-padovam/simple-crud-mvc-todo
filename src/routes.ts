@@ -1,18 +1,10 @@
 import express from 'express';
-import cors from 'cors';
 import { json } from 'body-parser';
 import { getAllTasks, createTask, updateTask, deleteTask } from './controllers/task-controller';
 import { register, login } from './controllers/auth-controller';
 
 const app = express();
-const allowedOrigins = ['http://localhost:3000'];
-
-const options: cors.CorsOptions = {
-  origin: allowedOrigins
-};
-
 app.use(json());
-app.use(cors(options));
 
 app.use(express.json());
 

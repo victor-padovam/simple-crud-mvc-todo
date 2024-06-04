@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file .env src/routes.ts",
+    "dev": "nodemon src/routes.ts",
+    "vercel-build": "npx prisma migrate deploy",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
     "build": "prisma generate && next build"
-
   },
   "keywords": [],
   "author": "",

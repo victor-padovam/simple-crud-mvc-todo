@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
-    "build": "prisma generate && netlify deploy --prod"
+    "build": " netlify deploy --prod"
   },
   "keywords": [],
   "author": "",

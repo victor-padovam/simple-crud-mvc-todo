@@ -1,5 +1,5 @@
-import { getAllTasks, createTask, updateTask, deleteTask } from './controllers/task-controller';
-import { register, login } from './controllers/auth-controller';
+import { getAllTasks, createTask, updateTask, deleteTask } from '../src/controllers/task-controller';
+import { register, login } from '../src/controllers/auth-controller';
 
 const express = require('express');
 const serverless = require('serverless-http');
